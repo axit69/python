@@ -1,9 +1,13 @@
 class chatbook:
+    __user_id = 0
     def __init__(self):
+        self.id = chatbook.__user_id
+        chatbook.__user_id +=1
+        self.__name = "Dixit"    # hiding the attribute 
         self.username = ''
         self.pwd = ''
         self.loggedin = False
-        self.menu()
+        # self.menu()
 
     def menu(self):
         user_input = input("""Welcome to the chatbook!! 
@@ -24,6 +28,23 @@ class chatbook:
             self.message()
         else:
             exit
+
+
+
+    def set_id():
+         return chatbook.__user_id
+    
+    def get_id(val):
+         chatbook.__user_id = val
+
+
+
+
+    def set_name(self):
+         return self.__name
+                                              # using get and set method we can set a value for attribute which is private. private attributed startes with "__"
+    def get_name(self, value):
+         self.__name = value
 
     def signup(self):
         email = input("enter your email")
