@@ -11,7 +11,9 @@ class chatbook:
                             2. Press 2 to signin. 
                             3. press 3 to write a post.
                             4. press 4 to message a friend.
-                            5. press 5 to exit.""")
+                            5. press 5 to exit.
+                               ---->>     """)
+
         if user_input == "1":
             self.signup()
         elif user_input == "2":
@@ -19,7 +21,7 @@ class chatbook:
         elif user_input == "3":
             self.post()
         elif user_input == "4":
-            pass
+            self.message()
         else:
             exit
 
@@ -35,16 +37,16 @@ class chatbook:
     def signin(self):
         if self.username== '' and self.pwd== '':
             print("first singup then signin: ")
+            self.menu()
         else:
             email = input("enter username ")
             pwd = input("enter password ")
             if self.username == email and self.pwd == pwd:
                 print("you have successfully signin !!")
-                self.loggedin = True
-                self.post()
+                self.menu()
             else:
                 print("please provide correct username and password: ")
-                self.signin()
+                self.menu()
         
     def post(self):
          email = input("enter username ")
@@ -54,6 +56,16 @@ class chatbook:
                 self.loggedin = True
                 postt = input("write a post: ")
                 print("you posted: " , postt)
+         else:
+                print("please signup to post ")
+                self.menu()
+
+    def message(self):
+         email = input("enter username ")
+         pwd = input("enter password ")
+         if self.username == email and self.pwd == pwd:
+                message = input("write a message: ")
+                print("your message: " , message)
          else:
                 print("please signup to post ")
                 self.menu()
