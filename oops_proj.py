@@ -31,10 +31,10 @@ class chatbook:
 
 
 
-    def set_id():
+    def set_id(self):
          return chatbook.__user_id
     
-    def get_id(val):
+    def get_id(self, val):
          chatbook.__user_id = val
 
 

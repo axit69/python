@@ -11,9 +11,9 @@ from oops_proj import chatbook
 user1 = chatbook()
 print(user1.id)
 
-chatbook.get_id(10)
 user2 = chatbook()
-print(user2.id)
+chatbook.get_id(99, 10)
+print(user2._chatbook__user_id)
 
 # user2 = chatbook()
 # print(user1._chatbook__name)     # to access hidden attribute , name is hidden in using "__" in oops_proj.py. object name . followed by _classname and then __attribute
